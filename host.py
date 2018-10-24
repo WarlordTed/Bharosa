@@ -66,9 +66,7 @@ def login():
 	if request.method == 'POST':
 		username = request.form['username']
 		password_candidate = request.form['password']
-
 		cur = mysql.connection.cursor()
-		
 		query_result = cur.execute("SELECT username, password FROM users WHERE username = %s", 
 			[username])
 
@@ -79,7 +77,10 @@ def login():
 				app.logger.info("PASSWORD MATCHED")
 				session['logged_in'] = True
 				session['username'] = username
-				userdata = data['username']
+				# print("LOOLLL",session['username'])
+				# ud.append(username)
+				# print("LOLLLL ",ud)
+				# ud = session['username']
 				return redirect(url_for('vote'))
 			else:
 				app.logger.info("PASSWORD NOT MATCHED")
@@ -123,24 +124,24 @@ def define_v_index(chain):
 def vote():
    
 	if request.method=="POST":
-		global user_value,userlist,state	
+		global ud,userlist,state
+		ud = session['username']
 		result=(request.form['party'])
 		# ip=(request.remote_addr)
 		#print(result,ip)
 		#ip=ip+1
-		cur = mysql.connection.cursor()
-		cur.execute("SELECT username FROM users WHERE username")
-
-		for row in cur:
-			username = row
-			if(username not in userlist):
-				userlist.append(username)
-				state[username]=1
-			print("#####",user_value)
-
-		cur.close()
+		print("Inside VOTE", ud)
+		if(ud not in userlist):
+			userlist.append(ud)
+			state[ud]=1
+		else:
+			print("Fail")
+			session.clear()
+			return redirect(url_for('not_done'))
+		
+		print("#####",ud)
 		print("-----",userlist)
-		txn = {username:-1,result:1}
+		txn = {ud:-1,result:1}
 		if(isValidTxn(txn,state)):
 			
 			print("Success")
@@ -169,4 +170,4 @@ def vote():
 
 if __name__ == '__main__':
 	app.secret_key = 'bcbhomies'
-	app.run(host='0.0.0.0', debug=True, threaded=True, port=8100)
+	app.run(host='172.16.21.88', debug=True, threaded=True, port=8100)
