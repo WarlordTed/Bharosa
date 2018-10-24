@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link rel="stylesheet" href="{{ url_for('static',filename = 'materialize/css/materialize.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename = 'materialize/css/materialize.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename = 'login.css') }}">
+        <title>Bharosa - An Election WebApp</title>
+    </head>
+    <body>
+        {% block body %}
+        {% endblock %}
+
+        <!-- <div class="container">
+            <h1>LOGIN</h1>
+
+            <form action="" method="POST">   
+		<a href="/vote/"><input type="submit" class="btn btn-large teal darker-3 white-text waves-effect" value = "Login"></a>
+            </form>
+        
+        </div> -->
+
+        <!--Import jQuery before materialize.js-->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="{{url_for('static',filename = 'materialize/js/materialize.js')}}"></script>
+        <script>
+            const sideNav = document.querySelector('.sidenav');
+            M.Sidenav.init(sideNav,{});
+
+            $(document).ready(function(){
+                $('.parallax').parallax();
+                $('.parallax').parallax('responsiveThreshold',200);
+            });
+        </script>
+</body>
+</html> 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <link type="text/css" rel="stylesheet" href="{{url_for('static',filename='Vote.css')}}">
+        <title>Vote here</title>
+    </head>
+
+    <body>
+        <h1>VOTE HERE</h1>
+        <div class="container">
+            <form method="POST">
+              
+                <div class="card-panel">
+                    <span class="white-text">
+                        <input class="with-gap" name="party" type="radio" id="p1" value="p_1"/>
+                        <label for="p1"><strong>SEDS (Students of Engineering for Development of Space)</strong></label>
+                    </span><br>
+                </div>
+
+                <div class="card-panel">
+                    <span class="white-text">
+                        <input class="with-gap" name="party" type="radio" id="p2" value="p_2"/>
+                        <label for="p2"><strong>IEEE CS (Institute of Electrical and Electronics Engineers)</strong></label>
+                    </span><br>
+                </div>
+
+                <div class="card-panel">
+                    <span class="white-text">
+                        <input class="with-gap" name="party" type="radio" id="p3" value="p_3"/>
+                        <label for="p3"><strong>CSI (Computer Society of India)</strong></label>
+                    </span>
+                </div>
+
+                <input type="submit" class="btn btn-large teal darker-3 white-text waves-effect" value = "Submit Vote">
+            </form>
+
+
+        </div>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    </body>
+</html> 

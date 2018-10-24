@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<div class="block2">
+    <section id="signup" class="section scrollspy">
+        <div class="container">
+            <h3>New Users, Welcome. <br>Register Here </h3>
+            {% from "_formhelpers.html" import render_field %}
+            <div class="row">
+            <form class="col s12" method="POST" action="">
+            <div class="row">
+                <div class="input-field col s6">
+                    {{render_field(form.name, class_ = "validate")}}
+                </div>
+                <div class="input-field col s6">
+                    {{render_field(form.username, class_ = "validate")}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    {{render_field(form.aadharid, class_ = "validate")}}
+                </div>
+                <div class="input-field col s6">
+                    {{render_field(form.vid, class_ = "validate")}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    {{render_field(form.email, class_ = "validate")}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    {{render_field(form.password)}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    {{render_field(form.confirm)}}
+                </div>
+            </div>
+            <div class="row">
+                <button class="btn waves-effect waves-light btn-large" type="submit" name="action">SignUp
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+            </div>
+            </form>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: #011627;
+    color: #fdfffc;
+}
+
+label{
+    color: black;
+}
+
+h1{
+    text-align: center;
+}
+
+form{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.parallax-container {
+    height: 500px;
+  }

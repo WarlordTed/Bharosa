@@ -1,0 +1,37 @@
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: #011627;
+    color: #fdfffc;
+    text-align: justify;
+    position: relative;
+}
+
+form{
+    font-size: 1.5em;
+}
+
+#about{
+    text-align: justify;
+    color: whitesmoke;
+}
+
+h1{
+    text-align: center;
+    position: relative;
+}
+
+p{
+    font-size: 2.5em;
+}
+
+.parallax-container {
+    height: max-content;
+}
+
+input, select, textarea{
+    color: whitesmoke;
+}
+
+.input-field {
+    color: wheat;
+  }

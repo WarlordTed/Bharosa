@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h2>Login Here Fellas</h2>
+<div class="container">
+    <form action="" method="POST" class="col s12">
+        <div class="row">
+            <div class="input-field col s12">
+                <label for="username" class="active">Username</label>
+                <input type="text" id="username" name="username" class="validate" required value={{request.form.username}}>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <label for="pss" class="active">Password</label>
+                <input type="password" id="pss" name="password" class="validate" required value={{request.form.password}}>
+            </div>
+        </div>
+        <input type="submit" class="btn btn-large teal darker-3 white-text waves-effect" value = "Login">
+    </form>
+</div>
+
+{% endblock %}
