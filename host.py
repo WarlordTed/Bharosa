@@ -156,7 +156,7 @@ def vote():
 				#chain.append(block)	
 				#checkChain(chain)
 				print("State",state)
-				session.clear()
+				# session.clear()
 				return redirect(url_for('done'))
 			else:
 				print("Fail")
@@ -170,4 +170,4 @@ def vote():
 
 if __name__ == '__main__':
 	app.secret_key = 'bcbhomies'
-	app.run(host='172.16.21.88', debug=True, threaded=True, port=8100)
+	app.run(host='0.0.0.0', debug=True, threaded=True, port=8100)

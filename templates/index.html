@@ -1,32 +1,8 @@
 {% extends 'layout.html' %}
 {% block body %}
-
-<div class="z-depth-4 navbar-fixed">
-    <nav style="background-color:teal">
-        <div class="container nav-wrapper">
-            <a href="index.html" class="brand-logo"><strong>BHAROSA</strong></a>
-            <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#signup">Signup</a></li>
-                <li><a href="#login">Login</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-        </div>
-    </nav>
-</div>
-    <ul class="sidenav" id="mobile-nav">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#signup">Signup</a></li>
-        <li><a href="#login">Login</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-    </ul>
-
     <div class="parallax-container">
         <div class="parallax">
-            <img src="{{ url_for('static', filename = 'image/image.jpg') }}">
+            <img src="{{ url_for('static', filename = 'image/image1.jpg') }}">
         </div>
     </div>
 
@@ -36,18 +12,68 @@
                 <h1>Welcome to Bharosa<br>An Election Web App</h1>
                 <p>
                     Welcome to Bharosa, an initiative by Govt. of India for E-voting as Decentralized Applications.
-                    An election that is purely based on blockchain technology which is SAFE & SECURE.
+                    An election that is purely based on blockchain technology which is SAFE & SECURE. We provide you 
+                    a common platform for all the Voting System.
                 </p>
             </div>
         </section>
     </div>
 
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="{{ url_for('static', filename = 'image/image2.jpg') }}">
+        </div>
+    </div>
+
     <div class="block3">
-        <section id="about" class="section scrollspy">
+        <section id="block" class="section scrollspy">
             <div class="container">
+                <h3>What in the world is BLOCKCHAIN ? </h3>
+                <p style="text-align: justify">
+                        The blockchain is an undeniably ingenious invention – the brainchild of a person or group of 
+                        people known by the pseudonym, <strong>Satoshi Nakamoto</strong>. <br> It is a growing list 
+                        of records, called blocks, which are linked using cryptography. Each block contains a 
+                        cryptographic hash of the previous block, a timestamp, and transaction data. By design, a blockchain 
+                        is resistant to modification of the data. It is an open, distributed ledger that can record 
+                        transactions between two parties efficiently and in a verifiable and permanent way.
+                    </p>
+            </div>
+        </section>
+    </div>
+
+    <div class="block4">
+        <section id="login" class="section scrollspy">
+            <div class="container" style="text-align:center;">
+                <br><br>
                 <a href="/signup/" class="waves-effect waves-light btn btn-large"><i class="material-icons left">person_add</i>Signup</a>
                 <a href="/login/" class="waves-effect waves-light btn btn-large"><i class="material-icons left">person</i>Login</a>
+                <br><br>
             </div>
+        </section>
+    </div>
+    <div class="block5">
+        <section id="contact" class="section scrollspy">
+            <footer class="page-footer teal white-text center">
+                <p class="flow-text">Bharosa </p>
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Mail us at - </h5>
+                        <p class="grey-text text-lighten-4">pranavjain514@gmail.com <br> kalyaniasthana@gmail.com <br> jaimmortal@gmail.com</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Connect with us</h5>
+                        <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!"><i class="fab fa-github fa-3x"></i></a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!"><i class="fab fa-twitter fa-3x"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-copyright darken-3">
+                    <div class="container" style="text-align: center;">
+                        © 2018 Copyright
+                    </div>
+                </div>
+            </footer>
         </section>
     </div>
 {% endblock %}

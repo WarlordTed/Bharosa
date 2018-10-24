@@ -14,9 +14,30 @@
         <title>Bharosa - An Election WebApp</title>
     </head>
     <body>
+        <div class="z-depth-4 navbar-fixed">
+            <nav style="background-color:teal">
+                <div class="container nav-wrapper">
+                    <a href="index.html" class="brand-logo"><strong>BHAROSA</strong></a>
+                    <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#block">Blockchain</a></li>
+                        <li><a href="#login">Login</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <ul class="sidenav" id="mobile-nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#block">Blockchain</a></li>
+            <li><a href="#login">Login</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
         {% block body %}
         {% endblock %}
-
         <!-- <div class="container">
             <h1>LOGIN</h1>
 
@@ -32,6 +53,9 @@
         <script>
             const sideNav = document.querySelector('.sidenav');
             M.Sidenav.init(sideNav,{});
+
+            const ss = document.querySelectorAll('.scrollspy');
+            M.ScrollSpy.init(ss,{});
 
             $(document).ready(function(){
                 $('.parallax').parallax();

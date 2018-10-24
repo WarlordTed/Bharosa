@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <!--Import Google Icon Font-->
-        <title>Not Good</title>
-	
-    </head>
+{% extends 'layout.html' %}
+{% block body %}
+<div class="container" style="text-align: center;">
+    <h1>You already voted once. Don't try to cheat ! </h1><br>
+    <img src="{{ url_for('static', filename = 'image/k2.png') }}">
+</div>
 
-
-    <body>
-	<h1>Your vote is already sumbmitted</h1> 
-    </body>
-
-
-</html> 
+{% endblock %}
